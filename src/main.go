@@ -10,9 +10,7 @@ import (
 
 func main() {
 	display, err := displays.NewSDLRenderer(32)
-	defer display.Dispose()
 	if err != nil {
-		display.Dispose()
 		fmt.Println(err)
 		os.Exit(-1)
 	}
